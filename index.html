@@ -1,0 +1,102 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Common JS Interactivity</title>
+  </head>
+  <body>
+    <h1>Common JS Interactivity used in Websites</h1>
+    <section class="form-container">
+      <h2 class="section-title">Website Auth</h2>
+      <div class="form-toggle">
+        <button id="showSignup" class="active">Sign Up</button>
+        <button id="showLogin" class="inactive">Login</button>
+      </div>
+
+      <form action="" id="signupForm">
+        <h2>Sign Up</h2>
+        <div>
+          <label for="signupUsername">Username</label>
+          <input type="text" id="signupUsername" name="username" required />
+          <p class="error-message" id="signupUsernameError"></p>
+        </div>
+        <div>
+          <label for="signupEmail">Email</label>
+          <input type="email" id="signupEmail" name="email" required />
+          <p class="error-message" id="signupEmailError"></p>
+        </div>
+        <div class="password-container">
+          <label for="signupPassword">Password</label>
+          <input type="password" id="signupPassword" name="password" required />
+          <span id="signupPasswordToggle" class="toggle-password">Show</span>
+          <p class="error-message" id="signupPasswordError"></p>
+          <p id="strengthMeter" class="strength-meter"></p>
+        </div>
+        <div class="password-container">
+          <label for="signupConfirmPassword">Confirm Password</label>
+          <input
+            type="password"
+            id="signupConfirmPassword"
+            name="confirmPassword"
+          />
+          <span id="signupConfirmPasswordToggle" class="toggle-password"
+            >Show</span
+          >
+          <p id="signupConfirmPasswordError" class="error-message"></p>
+        </div>
+
+        <div class="form-button">
+          <button type="submit" id="signupSubmit">Sign Up</button>
+        </div>
+      </form>
+
+      <!-- Login Form (hidden by default) -->
+      <form action="" id="loginForm" class="hidden">
+        <h2>Login</h2>
+        <div>
+          <label for="loginEmail">Email</label>
+          <input type="email" id="loginEmail" name="email" />
+          <p id="loginEmailError" class="error-message"></p>
+        </div>
+        <div class="password-container">
+          <label for="loginPassword">Password</label>
+          <input type="password" id="loginPassword" name="password" />
+          <span id="loginPasswordToggle" class="toggle-password">Show</span>
+          <p id="loginPasswordError" class="error-message"></p>
+        </div>
+        <div class="remember-me">
+          <label for="rememberMe">Remember Me</label>
+          <input type="checkbox" id="rememberMe" name="rememberMe" />
+        </div>
+        <div class="forgot-password">
+          <a href="#" id="forgotPasswordLink">Forgot Password?</a>
+        </div>
+        <div class="form-button">
+          <button type="submit" id="loginSubmit">Login</button>
+        </div>
+      </form>
+
+      <!-- Forgot Password Form (hidden by default) -->
+      <form id="forgotPasswordForm" class="hidden">
+        <h2>Forgot Password</h2>
+        <div>
+          <label for="forgotEmail">Email</label>
+          <input type="email" id="forgotEmail" name="email" />
+          <p id="forgotEmailError" class="error-message"></p>
+        </div>
+        <div class="form-button">
+          <button type="submit" id="forgotPasswordSubmit">
+            Reset Password
+          </button>
+        </div>
+      </form>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
+
+
+
